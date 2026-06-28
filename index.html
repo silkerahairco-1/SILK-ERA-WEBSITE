@@ -1,105 +1,184 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Silk Era</title>
 
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #000;
-      color: white;
+    *{margin:0;padding:0;box-sizing:border-box}
+
+    body{
+      background:#050505;
+      color:white;
+      font-family:Arial, sans-serif;
     }
 
-    nav {
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #222;
+    .top-bar{
+      background:#001f5c;
+      color:white;
+      text-align:center;
+      padding:10px;
+      font-size:13px;
+      letter-spacing:2px;
     }
 
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-      color: #d4af37;
-      letter-spacing: 2px;
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:25px 8%;
+      background:#000;
+      border-bottom:1px solid #222;
     }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 15px;
-      font-size: 14px;
+    .logo{
+      font-size:28px;
+      color:#d4af37;
+      font-weight:bold;
+      letter-spacing:3px;
     }
 
-    .hero {
-      text-align: center;
-      padding: 100px 20px;
-      background: linear-gradient(to bottom, #000, #071b3a);
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin-left:25px;
+      font-size:14px;
+      letter-spacing:1px;
     }
 
-    .hero h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
+    .hero{
+      min-height:85vh;
+      display:flex;
+      align-items:center;
+      padding:80px 8%;
+      background:linear-gradient(to right,#000 45%,#071b3a);
     }
 
-    .hero p {
-      font-size: 18px;
-      color: #ddd;
+    .hero-text{
+      max-width:650px;
     }
 
-    .btn {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 14px 32px;
-      background: #0b5fff;
-      color: white;
-      text-decoration: none;
-      border-radius: 30px;
-      font-weight: bold;
+    .small{
+      color:#d4af37;
+      letter-spacing:8px;
+      margin-bottom:20px;
     }
 
-    section {
-      padding: 60px 20px;
-      text-align: center;
+    h1{
+      font-size:90px;
+      line-height:.9;
+      font-family:Georgia, serif;
     }
 
-    h2 {
-      color: #d4af37;
-      font-size: 32px;
+    h1 span{
+      color:#d4af37;
     }
 
-    .cards {
-      display: grid;
-      gap: 20px;
-      max-width: 900px;
-      margin: 30px auto;
+    .hero p{
+      margin-top:25px;
+      font-size:22px;
+      color:#ddd;
+      line-height:1.5;
     }
 
-    .card {
-      background: #111;
-      padding: 25px;
-      border-radius: 15px;
-      border: 1px solid #222;
+    .btn{
+      display:inline-block;
+      margin-top:35px;
+      padding:16px 36px;
+      background:#003cff;
+      color:white;
+      text-decoration:none;
+      letter-spacing:2px;
+      font-weight:bold;
+      border-radius:2px;
     }
 
-    footer {
-      text-align: center;
-      padding: 30px;
-      background: #050505;
-      color: #aaa;
+    section{
+      padding:80px 8%;
+      text-align:center;
     }
 
-    @media (min-width: 700px) {
-      .cards {
-        grid-template-columns: repeat(3, 1fr);
+    h2{
+      font-family:Georgia, serif;
+      font-size:42px;
+      color:white;
+      margin-bottom:15px;
+    }
+
+    .gold{
+      color:#d4af37;
+      letter-spacing:4px;
+      font-size:14px;
+      margin-bottom:10px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:25px;
+      margin-top:40px;
+    }
+
+    .card{
+      background:#111;
+      border:1px solid #333;
+      padding:35px 20px;
+      min-height:180px;
+    }
+
+    .card h3{
+      color:#d4af37;
+      margin-bottom:15px;
+    }
+
+    .card p{
+      color:#ccc;
+      line-height:1.5;
+    }
+
+    .about{
+      background:#080808;
+      text-align:left;
+    }
+
+    .about p{
+      color:#ccc;
+      max-width:700px;
+      line-height:1.8;
+      font-size:18px;
+    }
+
+    .contact{
+      background:#00143d;
+    }
+
+    footer{
+      padding:35px;
+      text-align:center;
+      color:#aaa;
+      background:#000;
+      border-top:1px solid #222;
+    }
+
+    @media(max-width:700px){
+      nav{
+        flex-direction:column;
+        gap:20px;
       }
 
-      .hero h1 {
-        font-size: 70px;
+      nav a{
+        margin:8px;
+      }
+
+      h1{
+        font-size:55px;
+      }
+
+      .hero{
+        text-align:center;
+        padding:70px 6%;
       }
     }
   </style>
@@ -107,48 +186,84 @@
 
 <body>
 
+  <div class="top-bar">FREE SHIPPING ON ORDERS $200+</div>
+
   <nav>
     <div class="logo">SILK ERA</div>
     <div>
-      <a href="#shop">Shop</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="#shop">SHOP</a>
+      <a href="#about">ABOUT</a>
+      <a href="#gallery">GALLERY</a>
+      <a href="#contact">CONTACT</a>
     </div>
   </nav>
 
   <div class="hero">
-    <h1>Welcome to Your Silk Era</h1>
-    <p>Luxury hair extensions made to elevate your confidence.</p>
-    <a class="btn" href="#shop">Shop Collection</a>
+    <div class="hero-text">
+      <div class="small">WELCOME TO YOUR</div>
+      <h1>SILK <span>ERA</span></h1>
+      <p>Luxury hair extensions crafted for every style, every occasion, and every level of confidence.</p>
+      <a href="#shop" class="btn">SHOP COLLECTION</a>
+    </div>
   </div>
 
   <section id="shop">
-    <h2>Shop Hair Extensions</h2>
-    <div class="cards">
+    <p class="gold">SHOP OUR COLLECTION</p>
+    <h2>Luxury Hair Extensions</h2>
+
+    <div class="grid">
       <div class="card">
         <h3>Body Wave Bundles</h3>
-        <p>Soft, full, and long-lasting.</p>
+        <p>Soft, full, and long lasting with a natural luxury finish.</p>
       </div>
 
       <div class="card">
         <h3>Straight Bundles</h3>
-        <p>Sleek, silky, and luxury quality.</p>
+        <p>Sleek, silky, and polished for everyday wear or glam looks.</p>
       </div>
 
       <div class="card">
         <h3>Custom Orders</h3>
-        <p>Message us for lengths, pricing, and availability.</p>
+        <p>Message us for lengths, pricing, availability, and bundle deals.</p>
       </div>
     </div>
   </section>
 
-  <section id="about">
-    <h2>About Silk Era</h2>
-    <p>Silk Era is a luxury hair brand created for anyone who wants soft, beautiful, confidence-boosting hair.</p>
+  <section class="about" id="about">
+    <p class="gold">ABOUT SILK ERA</p>
+    <h2>More Than Hair.</h2>
+    <p>
+      Silk Era is a luxury hair brand created to provide premium-quality hair extensions
+      that help every customer feel confident, polished, and beautiful in their own way.
+      Our goal is to deliver soft, silky, long-lasting hair with a high-end experience from start to finish.
+    </p>
   </section>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
+  <section id="gallery">
+    <p class="gold">REAL PHOTOS COMING SOON</p>
+    <h2>Gallery</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Install Photos</h3>
+        <p>Your real client and install photos will go here.</p>
+      </div>
+
+      <div class="card">
+        <h3>Bundle Photos</h3>
+        <p>Your real product photos will go here.</p>
+      </div>
+
+      <div class="card">
+        <h3>Transformations</h3>
+        <p>Before and after hair transformations will go here.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <p class="gold">CONNECT WITH US</p>
+    <h2>Contact Silk Era</h2>
     <p>Email: silkerahair.co@gmail.com</p>
     <p>Instagram: @Simplysilk.era_</p>
     <p>TikTok: @Simplysilk.era_</p>
@@ -159,4 +274,4 @@
   </footer>
 
 </body>
-</html>
+</html>  

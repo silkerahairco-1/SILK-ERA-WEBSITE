@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Silk Era</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: white;
+    }
+
+    nav {
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #222;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #d4af37;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+      font-size: 14px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      background: linear-gradient(to bottom, #000, #071b3a);
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #ddd;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 14px 32px;
+      background: #0b5fff;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #d4af37;
+      font-size: 32px;
+    }
+
+    .cards {
+      display: grid;
+      gap: 20px;
+      max-width: 900px;
+      margin: 30px auto;
+    }
+
+    .card {
+      background: #111;
+      padding: 25px;
+      border-radius: 15px;
+      border: 1px solid #222;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #050505;
+      color: #aaa;
+    }
+
+    @media (min-width: 700px) {
+      .cards {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .hero h1 {
+        font-size: 70px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo">SILK ERA</div>
+    <div>
+      <a href="#shop">Shop</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <h1>Welcome to Your Silk Era</h1>
+    <p>Luxury hair extensions made to elevate your confidence.</p>
+    <a class="btn" href="#shop">Shop Collection</a>
+  </div>
+
+  <section id="shop">
+    <h2>Shop Hair Extensions</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Body Wave Bundles</h3>
+        <p>Soft, full, and long-lasting.</p>
+      </div>
+
+      <div class="card">
+        <h3>Straight Bundles</h3>
+        <p>Sleek, silky, and luxury quality.</p>
+      </div>
+
+      <div class="card">
+        <h3>Custom Orders</h3>
+        <p>Message us for lengths, pricing, and availability.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Silk Era</h2>
+    <p>Silk Era is a luxury hair brand created for anyone who wants soft, beautiful, confidence-boosting hair.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: silkerahair.co@gmail.com</p>
+    <p>Instagram: @Simplysilk.era_</p>
+    <p>TikTok: @Simplysilk.era_</p>
+  </section>
+
+  <footer>
+    <p>© 2026 Silk Era. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
